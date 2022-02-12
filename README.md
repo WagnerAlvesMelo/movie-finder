@@ -12,7 +12,7 @@ Aplicação criada com a finalidade de permitir que o usuário busque informaç�
 ## Requisitos Não Funcionais
 - Ao clicar em buscar deve haver uma animação que move o campo de busca para o topo da tela
 - A busca deve ser realizada através do botão enter ou um clique no botão de buscar dentro da caixa de texto
-- A paginação da lista de filmes deve ser realizada de 6 em 6
+- A paginação da lista de filmes deve ser realizada de 6 em 6 e com scroll infinito
 - Deve haver um botão voltar na tela de detalhes do filme que leva para o topo da tela anterior com a listagem dos filmes
 
 ## Tecnologias usadas
