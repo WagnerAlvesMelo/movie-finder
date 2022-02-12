@@ -15,6 +15,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      
+      - name: auth
+        run: 
+          system('git config --global user.email "walves13@outlook.com")
+          system('git config --global user.name "WagnerAlvesMelo")
 
       # Runs a single command using the runners shell
       - name: install
@@ -22,4 +27,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: deploy
-        run: yarn deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: build
