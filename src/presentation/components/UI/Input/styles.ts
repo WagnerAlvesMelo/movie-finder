@@ -5,6 +5,7 @@ import { TextField } from '@mui/material'
 export const Wrapper = styled.div`
   height: 40px;
   width: 100%;
+  position: relative;
 `
 
 export const Input = styled(TextField)`
@@ -21,4 +22,11 @@ export const Input = styled(TextField)`
     outline: none;
     border: none;
   }
+`
+
+export const IconWrapper = styled.div`
+  position: absolute;
+  right: 10px;
+  top: 7px;
+  cursor: pointer;
 `

@@ -6,13 +6,15 @@ import { TextFieldProps } from '@mui/material'
 // Styles
 import * as S from './styles'
 
-export default function TextField({
-  ...props
-}: TextFieldProps & { icon?: React.ReactNode }) {
+type TextFieldComponentProps = TextFieldProps & {
+  icon?: React.ReactNode
+}
+
+export default function TextField({ ...props }: TextFieldComponentProps) {
   return (
     <S.Wrapper>
       <S.Input autoComplete='off' id={props.id} {...props} />
-      {props.icon}
+      <S.IconWrapper>{props.icon}</S.IconWrapper>
     </S.Wrapper>
   )
 }

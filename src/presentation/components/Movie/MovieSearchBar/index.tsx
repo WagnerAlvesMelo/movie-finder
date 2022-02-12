@@ -5,6 +5,7 @@ import { useNavigate, useLocation, useSearchParams } from 'react-router-dom'
 import TextField from '../../UI/Input'
 
 import Logo from '../../../assets/icons/logo.svg'
+import { ReactComponent as SearchLogo } from '../../../assets/icons/search.svg'
 
 import * as S from './styles'
 import useMovies from '../../../contexts/movies'
@@ -61,6 +62,7 @@ export default function MovieSearchBar({
         placeholder='Procure seu Filme'
         onChange={(e) => onChange(e.target.value)}
         value={movies.state.query}
+        icon={<SearchLogo onClick={handleSubmit} />}
       />
       <div />
     </S.Wrapper>

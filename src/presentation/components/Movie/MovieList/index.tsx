@@ -1,10 +1,11 @@
 import React from 'react'
 
-import { Grid } from '@mui/material'
+import { Grid, Typography } from '@mui/material'
 import InfiniteScroll from 'react-infinite-scroll-component'
 
 import Movie from '../../../../domain/models/movie/movie'
 import MovieCard from '../MovieCard'
+import useMovies from '../../../contexts/movies'
 
 type MovieListProps = {
   movies: Movie[]
@@ -17,6 +18,14 @@ export default function MovieList({
   totalResults,
   fetchData,
 }: MovieListProps) {
+  const moviesCtx = useMovies()
+  if (movies.length === 0 && !moviesCtx.state.isLoading) {
+    return (
+      <Typography component='legend' fontSize='22px'>
+        Nenhum filme a ser exibido
+      </Typography>
+    )
+  }
   return (
     <InfiniteScroll
       dataLength={movies.length}

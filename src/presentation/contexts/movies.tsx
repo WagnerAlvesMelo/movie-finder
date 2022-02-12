@@ -44,8 +44,11 @@ export function MoviesProvider({ children }: { children: React.ReactNode }) {
     actualPage: number,
     queryParam?: string
   ) {
-    setIsLoading(true)
     try {
+      if (reset) {
+        setIsLoading(true)
+        setMovies([])
+      }
       if (
         !reset &&
         totalResults &&
@@ -54,6 +57,7 @@ export function MoviesProvider({ children }: { children: React.ReactNode }) {
         setMovies([...movies, ...cachedItems.splice(0, 6)])
         return
       }
+
       const gettedMovies = await movieService.getMovies({
         name: queryParam?.trim() || query.trim(),
         page: reset ? 1 : actualPage + 1,
@@ -89,7 +93,7 @@ export function MoviesProvider({ children }: { children: React.ReactNode }) {
       }
       setTotalResults(Number(gettedMovies.totalResults))
     } catch (error) {
-      return
+      throw new Error()
     } finally {
       setIsLoading(false)
     }
