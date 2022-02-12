@@ -20,6 +20,21 @@ const GlobalStyle = createGlobalStyle`
     background: linear-gradient(180deg, #000000 48.91%, #891a10 100%);
     background-attachment: fixed;
   }
+
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+      monospace;
+  }
+
 `
 
 export default GlobalStyle
