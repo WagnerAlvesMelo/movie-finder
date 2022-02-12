@@ -5,8 +5,8 @@
 Aplicação criada com a finalidade de permitir que o usuário busque informações de filmes da preferência do mesmo.
 
 ## Requisitos Funcionais
-- Deve ser possível buscar uma lista de filmes tendo como parâmetro o nome\
-- Deve ser possível visualizar uma lista com os posters dos filmes e ao apontar o cursor para um determinado filme mostrar título, ano de lançamento, tipo e IMDBID e um botão + INFO para ver detalhes do filme\
+- Deve ser possível buscar uma lista de filmes tendo como parâmetro o nome
+- Deve ser possível visualizar uma lista com os posters dos filmes e ao apontar o cursor para um determinado filme mostrar título, ano de lançamento, tipo e IMDBID e um botão + INFO para ver detalhes do filme
 - Ao clicar no botão +INFO deve ser necessário ver título, ano, classificação, data de lançamento, gênero, diretor, escritor, atores, resumo, idioma, país de orígem, poster, metascore, avaliação do IMDB, número de votos da IMDB e tipo
 
 ## Requisitos Não Funcionais
