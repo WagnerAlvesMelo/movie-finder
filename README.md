@@ -1,49 +1,54 @@
 ![example workflow](https://github.com/WagnerAlvesMelo/movie-finder/actions/workflows/main.yml/badge.svg)
 
+# Link da aplicação: https://wagneralvesmelo.github.io/movie-finder/
 
-# Getting Started with Create React App
+Aplicação criada com a finalidade de permitir que o usuário busque informações de filmes da preferência do mesmo.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Requisitos Funcionais
+- Deve ser possível buscar uma lista de filmes tendo como parâmetro o nome
+- Deve ser possível visualizar uma lista com os posters dos filmes e ao apontar o cursor para um determinado filme mostrar título, ano de lançamento, tipo e IMDBID e um botão + INFO para ver detalhes do filme
+- Ao clicar no botão +INFO deve ser necessário ver título, ano, classificação, data de lançamento, gênero, diretor, escritor, atores, resumo, idioma, país de orígem, poster, metascore, avaliação do IMDB, número de votos da IMDB e tipo
 
-## Available Scripts
+## Requisitos Não Funcionais
+- Ao clicar em buscar deve haver uma animação que move o campo de busca para o topo da tela
+- A busca deve ser realizada através do botão enter ou um clique no botão de buscar dentro da caixa de texto
+- A paginação da lista de filmes deve ser realizada de 6 em 6 e com scroll infinito
+- Deve haver um botão voltar na tela de detalhes do filme que leva para o topo da tela anterior com a listagem dos filmes
 
-In the project directory, you can run:
+## Tecnologias usadas
+- ReactJS
+- ReactContext
+- MaterialUI
+- StyledComponents
 
-### `yarn start`
+### Arquitetura do projeto
+A arquitetura do projeto segue os conceitos de Clean Architecture, isolando as camadas de negócio das camadas de interação e frameworks. Referência dos conceitos da arquitetura: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Estrutura de pastas
+Domain - responsável por declarar os casos de uso e as entidades do sistema;\
+Service - responsável por implementar os casos de uso;\
+Infra - responsável por adaptar protocolos e bibliotecas de forma genérica para serem usados pela camada de serviço;\
+Repository - responsável pelas comunicações com API's externas\
+Presentation - responsável pela interface do sistema. Ex: componentes, páginas, hooks e etc;\
+Main - responsável por instanciar e estruturar as classes do projeto e suas dependências
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Instalação do projeto localmente
+### Requisitos:
+- NodeJS (versão recomendada: v14.18.3 ou superior)
+- NPM
+- Yarn (para instalar execute o comando npm i -g yarn tendo o Node e o NPM instalados na máquina ou container)
 
-### `yarn test`
+Para instalar as dependências do projeto execute o seguinte script:
+```
+yarn
+```
+Para formatar os espaçamentos gerados pelo Github:
+```
+yarn eslint --fix .
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para iniciar o projeto execute o comando:
+```
+yarn start
+```
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
