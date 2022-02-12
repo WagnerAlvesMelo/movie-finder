@@ -20,6 +20,8 @@ Aplicação criada com a finalidade de permitir que o usuário busque informaç�
 - ReactContext
 - MaterialUI
 - StyledComponents
+- Github pages
+- Github actions
 
 ### Arquitetura do projeto
 A arquitetura do projeto segue os conceitos de Clean Architecture, isolando as camadas de negócio das camadas de interação e frameworks. Referência dos conceitos da arquitetura: https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
