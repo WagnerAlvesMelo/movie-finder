@@ -50,7 +50,6 @@ export const Wrapper = styled.form<{ toTop: boolean }>`
   top: 50%;
   margin: 0 auto;
   transform: translateY(-50%);
-  transition: all 0.5s;
   animation: ${({ toTop }) =>
     css`
       ${toTop ? up : down} 0.5s ease-in-out

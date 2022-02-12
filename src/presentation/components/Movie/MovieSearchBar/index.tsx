@@ -30,7 +30,7 @@ export default function MovieSearchBar({
   const param = params.get('q')
 
   useEffect(() => {
-    if (param && param !== value) {
+    if (param) {
       window.scrollTo(0, 0)
       movies.changeQuery(param)
       findMovies(param)

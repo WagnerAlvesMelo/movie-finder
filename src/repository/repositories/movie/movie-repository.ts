@@ -14,7 +14,7 @@ export default class MovieRepository implements MovieRepositoryProtocol {
     const { apiRepository } = this
 
     const httpResponse = await apiRepository.get({
-      url: `http://omdbapi.com/?i=${params.id}`,
+      url: `https://omdbapi.com/?i=${params.id}`,
     })
 
     if (
@@ -31,7 +31,7 @@ export default class MovieRepository implements MovieRepositoryProtocol {
     const { apiRepository } = this
 
     const httpResponse = await apiRepository.get({
-      url: `http://omdbapi.com/?s=${params.name}&page=${params.page}`,
+      url: `https://omdbapi.com/?s=${params.name}&page=${params.page}`,
     })
 
     if (

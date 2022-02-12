@@ -16,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
     flex: 1;
   }
 
-  body {
+  html {
     background: linear-gradient(180deg, #000000 48.91%, #891a10 100%);
     background-attachment: fixed;
   }

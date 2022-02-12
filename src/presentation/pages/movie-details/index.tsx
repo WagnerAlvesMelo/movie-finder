@@ -106,6 +106,7 @@ export default function MovieDetails() {
                     md={6}
                     alignContent='flex-end'
                     margin='0 0 12px 0'
+                    key={info.label}
                   >
                     <Typography
                       fontSize='18px'

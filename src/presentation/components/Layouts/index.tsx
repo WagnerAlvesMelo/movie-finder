@@ -1,11 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Outlet,
-} from 'react-router-dom'
+import { HashRouter as Router, Route, Routes, Outlet } from 'react-router-dom'
 import useMovies from '../../contexts/movies'
 
 import Home from '../../pages/home'
@@ -34,7 +29,9 @@ export default function MainLayout() {
               <>
                 <MovieSearchBar
                   onChange={movies.changeQuery}
-                  findMovies={() => movies.findMovies(true, movies.state.page)}
+                  findMovies={(query?: string) =>
+                    movies.findMovies(true, movies.state.page, query)
+                  }
                   value={movies.state.query}
                   pathname={setPath}
                 />
