@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect } from 'react'
+import React, { FormEvent, useEffect, useRef } from 'react'
 
 import { useNavigate, useLocation, useSearchParams } from 'react-router-dom'
 
@@ -27,6 +27,8 @@ export default function MovieSearchBar({
   const [params] = useSearchParams()
   const location = useLocation()
   const movies = useMovies()
+  const inputRef: React.MutableRefObject<HTMLInputElement | undefined> =
+    useRef()
 
   const param = params.get('q')
 
@@ -44,6 +46,9 @@ export default function MovieSearchBar({
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault()
+    if (inputRef.current) {
+      inputRef.current.blur()
+    }
     await findMovies()
     if (param !== value) {
       navigate(`movies?q=${value}`)
@@ -63,6 +68,7 @@ export default function MovieSearchBar({
         onChange={(e) => onChange(e.target.value)}
         value={movies.state.query}
         icon={<SearchLogo onClick={handleSubmit} />}
+        inputRef={inputRef}
       />
       <div />
     </S.Wrapper>
