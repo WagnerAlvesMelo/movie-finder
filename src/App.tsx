@@ -1,5 +1,4 @@
 import React from 'react'
-import './App.css'
 import MainLayout from './presentation/components/Layouts'
 import { MoviesProvider } from './presentation/contexts/movies'
 import GlobalStyle from './presentation/styles/global'
