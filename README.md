@@ -1,3 +1,6 @@
+![example workflow](https://github.com/WagnerAlvesMelo/movie-finder/actions/workflows/main.yml/badge.svg)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
