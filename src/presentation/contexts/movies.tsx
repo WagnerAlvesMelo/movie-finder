@@ -93,7 +93,7 @@ export function MoviesProvider({ children }: { children: React.ReactNode }) {
       }
       setTotalResults(Number(gettedMovies.totalResults))
     } catch (error) {
-      throw new Error()
+      return
     } finally {
       setIsLoading(false)
     }
