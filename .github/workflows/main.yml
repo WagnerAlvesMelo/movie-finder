@@ -15,11 +15,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      
-      - name: auth
-        run: 
-          system('git config --global user.email "walves13@outlook.com")
-          system('git config --global user.name "WagnerAlvesMelo")
 
       # Runs a single command using the runners shell
       - name: install
