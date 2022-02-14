@@ -16,11 +16,13 @@ type MovieContext = {
     query?: string
   ) => Promise<void>
   changeQuery: (query: string) => void
+  resetPage: () => void
 }
 
 export const MoviesContext = React.createContext<MovieContext>({
   changeQuery: async () => undefined,
   findMovies: async () => undefined,
+  resetPage: async () => undefined,
   state: {
     movies: [],
     page: 1,
@@ -103,6 +105,12 @@ export function MoviesProvider({ children }: { children: React.ReactNode }) {
     setQuery(queryText)
   }
 
+  const resetPage = () => {
+    setPage(1)
+    setCachedItems([])
+    setMovies([])
+  }
+
   const providerValues = useMemo(() => {
     return {
       state: {
@@ -114,6 +122,7 @@ export function MoviesProvider({ children }: { children: React.ReactNode }) {
       },
       findMovies,
       changeQuery,
+      resetPage,
     }
   }, [query, movies, page, totalResults, isLoading, findMovies, changeQuery])
 
